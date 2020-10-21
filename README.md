@@ -22,7 +22,8 @@
 - 2020年10月21日23:25:30 update 第一章[跑马灯](./contents/ch1-ledwater)
 - 2020年10月21日12:08:58 update readme.md
 ## 目录
-1. 待定
+1. [跑马灯](./contents/ch1-ledwater)
+
 ## 背景
 
 感谢兴爷，感谢苍天，感谢父母，让我遇见如此的小幸运  
