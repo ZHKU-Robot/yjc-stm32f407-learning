@@ -9,6 +9,8 @@
 
 
 ## 内容列表
+- [前言](#前言)
+- [TODO](#TODO)
 - [更新](#更新)
 - [目录](#目录)
 - [背景](#背景)
@@ -18,6 +20,14 @@
 - [维护者](#维护者)
 - [如何贡献](#如何贡献)
 - [使用许可](#使用许可)
+## 前言
+在学习前，推荐阅读[快速组织代码技巧](./contents/ch01-quickexample)
+## TODO
+- 缓慢的更新中
+- 芯片手册以及参考手册要了解一点
+- STM32开发基础知识也要知道
+
+
 ## 更新
 - 2020年10月22日19:02:19 update [蜂鸣器](./contents/ch2-beep)和[键盘输入](./contents/ch3-keyinput)
 - 2020年10月21日23:25:30 update 第一章[跑马灯](./contents/ch1-ledwater)
@@ -39,7 +49,7 @@
 
 这个仓库的目标是：
 
-1. 为了兴爷的梦
+1. 贪吃蛇
 
 ## 安装
 
@@ -64,7 +74,7 @@
 
 ## 如何贡献
 
-非常欢迎你的加入！[提一个 Issue](./issues/new) 或者提交一个 Pull Request。
+非常欢迎你的加入！[提一个 Issue](https://github.com/ZHKU-Robot/yjc-stm32f407-learning/issues/new) 或者提交一个 Pull Request。
 
 
 本 Readme 遵循 [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) 行为规范。
@@ -76,4 +86,4 @@
 
 
 ## 使用许可
-[MIT License](./blob/master/LICENSE)
+[MIT License](./LICENSE)
