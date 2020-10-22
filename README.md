@@ -29,14 +29,17 @@
 
 
 ## 更新
-- 2020年10月22日19:02:19 update [蜂鸣器](./contents/ch2-beep)和[键盘输入](./contents/ch3-keyinput)
-- 2020年10月21日23:25:30 update 第一章[跑马灯](./contents/ch1-ledwater)
+- 2020年10月22日22:19:14 update ch4-[串口通信实验](./contents/ch4-serialport) 和 ch01-[快速组织代码](./contents/ch01-quickexample)
+- 2020年10月22日19:02:19 update ch2-[蜂鸣器](./contents/ch2-beep)和ch3-[键盘输入](./contents/ch3-keyinput)
+- 2020年10月21日23:25:30 update ch1-[跑马灯](./contents/ch1-ledwater)
 - 2020年10月21日12:08:58 update readme.md
 ## 目录
 0. [项目模板](./contents/ch0-template)
+1. [快速组织代码](./contents/ch01-quickexample)
 1. [跑马灯](./contents/ch1-ledwater)
 2. [蜂鸣器](./contents/ch2-beep)
 3. [键盘输入](./contents/ch3-keyinput)
+4. [串口通信实验](./contents/ch4-serialport)
 
 
 
