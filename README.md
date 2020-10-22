@@ -19,10 +19,16 @@
 - [如何贡献](#如何贡献)
 - [使用许可](#使用许可)
 ## 更新
+- 2020年10月22日19:02:19 update [蜂鸣器](./contents/ch2-beep)和[键盘输入](./contents/ch3-keyinput)
 - 2020年10月21日23:25:30 update 第一章[跑马灯](./contents/ch1-ledwater)
 - 2020年10月21日12:08:58 update readme.md
 ## 目录
+0. [项目模板](./contents/ch0-template)
 1. [跑马灯](./contents/ch1-ledwater)
+2. [蜂鸣器](./contents/ch2-beep)
+3. [键盘输入](./contents/ch3-keyinput)
+
+
 
 ## 背景
 

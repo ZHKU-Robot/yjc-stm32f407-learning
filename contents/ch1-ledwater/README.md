@@ -14,6 +14,13 @@
 	- 本实验通过代码控制开发板上的两个LED：
         - DS0和DS1交替闪烁，实现类似跑马灯的效果 
 
+## 2 硬件设计
+本章用到的硬件只有 LED（DS0 和 DS1）。其电路在 ALIENTEK 探索者 STM32F4 开发板
+上默认是已经连接好了的。DS0 接 PF9，DS1 接 PF10。所以在硬件上不需要动任何东西。其连
+接原理图如图下：
+![img](img/2.png)
+
+## 3 软件设计
 当然最重要是理解代码
 
 来看看hardware下的文件led.c
@@ -111,7 +118,8 @@ definition of …”,这样光标定位到 stm32f4xx_gpio.c 文件中的 GPIO_In
                                     ((PERIPH) == GPIOK))
 
 ```
-很明显可以看出，GPIOx 的取值规定只允许是 GPIOA~GPIOK。
+很明显可以看出，GPIOx 的取值规定只允许是 GPIOA~GPIOK。具体调用哪个就要看时钟树了  
+
 
 同样的办法，我们双击“IS_GPIO_MODE” 右键点击“go to defition of…”,定位到下面的定义：
 
@@ -272,5 +280,6 @@ int main(void)
 有了这个就可以知道你当前使用的 flash 和 sram 大小了，所以，一定要注意的是程序的大
 小不是.hex 文件的大小，而是编译后的 Code 和 RO-data 之和
 
+再用keil的一键烧录就好了，真不错
 
 ## 第一感觉太复杂了！！！
