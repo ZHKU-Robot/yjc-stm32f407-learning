@@ -23,12 +23,12 @@
 ## 前言
 在学习前，推荐阅读[快速组织代码技巧](./contents/ch01-quickexample)
 ## TODO
-- 缓慢的更新中
-- 芯片手册以及参考手册要了解一点
-- STM32开发基础知识也要知道
+- 贪吃蛇必须要安排
 
 
 ## 更新
+- 2020年10月23日20:51:08 update cha-[TFTLCD显示屏](./contents/cha-TFTLCD) 
+    - 这一章很难,推荐选读，我们只需要去知道怎么调函数就好hhh
 - 2020年10月22日22:19:14 update ch4-[串口通信实验](./contents/ch4-serialport) 和 ch01-[快速组织代码](./contents/ch01-quickexample)
 - 2020年10月22日19:02:19 update ch2-[蜂鸣器](./contents/ch2-beep)和ch3-[键盘输入](./contents/ch3-keyinput)
 - 2020年10月21日23:25:30 update ch1-[跑马灯](./contents/ch1-ledwater)
@@ -40,6 +40,7 @@
 2. [蜂鸣器](./contents/ch2-beep)
 3. [键盘输入](./contents/ch3-keyinput)
 4. [串口通信实验](./contents/ch4-serialport)
+5. [TFTLCD显示屏](./contents/cha-TFTLCD)  
 
 
 
