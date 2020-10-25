@@ -23,10 +23,13 @@
 ## 前言
 在学习前，推荐阅读[快速组织代码技巧](./contents/ch01-quickexample)
 ## TODO
-- 贪吃蛇必须要安排
+- 俄罗斯方块
+- 贪吃蛇必须要安排(已完成)
 
 
 ## 更新
+- 2020年10月25日15:19:42 成功运行[贪吃蛇](./demo/mYsnake)
+    - 如有bug请提交issue麻烦了
 - 2020年10月23日20:51:08 update cha-[TFTLCD显示屏](./contents/cha-TFTLCD) 
     - 这一章很难,推荐选读，我们只需要去知道怎么调函数就好hhh
 - 2020年10月22日22:19:14 update ch4-[串口通信实验](./contents/ch4-serialport) 和 ch01-[快速组织代码](./contents/ch01-quickexample)
@@ -41,6 +44,7 @@
 3. [键盘输入](./contents/ch3-keyinput)
 4. [串口通信实验](./contents/ch4-serialport)
 5. [TFTLCD显示屏](./contents/cha-TFTLCD)  
+6. [贪吃蛇](./demo/mYsnake)
 
 
 
@@ -65,7 +69,7 @@
 
 
 ## 示例
-暂无
+![img](img/togif2.gif)
 
 ## 相关仓库
 
