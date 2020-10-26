@@ -26,8 +26,7 @@ STM32F4 的 IO 口在上两章已经有了比较详细的介绍，这里我们�
 - 3） 4 个按键：KEY0、KEY1、KEY2、和 KEY_UP。
 
 DS0、DS1 以及蜂鸣器和 STM32F4 的连接在上两章都已经分别介绍了，在探索者 STM32F4
-开发板上的按键 KEY0 连接在 PE4 上、KEY1 连接在 PE3 上、KEY2 连接在 PE2 上、KEY_UP
-连接在 PA0 上。如图 8.2.1 所示：
+开发板上的按键 KEY0 连接在 PE4 上、KEY1 连接在 PE3 上、KEY2 连接在 PE2 上、KEY_UP连接在 PA0 上。如图 8.2.1 所示：
 
 ![img](img/1.png)
 

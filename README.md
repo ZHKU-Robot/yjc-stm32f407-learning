@@ -57,7 +57,23 @@
         6. 使能串口。 
         7. 编写中断处理函数：函数名格式为 USARTxIRQHandler(x 对应串口号)。 
 - 2020年10月22日19:02:19 update ch2-[蜂鸣器](./contents/ch2-beep)和ch3-[键盘输入](./contents/ch3-keyinput)
+    - 蜂鸣器
+        - #define BEEP PFout(8)
+        -  GPIO_ResetBits(GPIOF,GPIO_Pin_8);  //蜂鸣器对应引脚GPIOF8拉低， 
+    - 键盘输入
+        - KEY0 连接在 PE4 上
+        - KEY1 连接在 PE3 上
+        - KEY2 连接在 PE2 上
+        - KEY_UP连接在 PA0 上
+        - **KEY0、KEY1 和 KEY2 是低电平有效的，而 KEY_UP 是高电平有效**
+        - 使能GPIOA,GPIOE对应的脚即可
 - 2020年10月21日23:25:30 update ch1-[跑马灯](./contents/ch1-ledwater)
+    - **在配置 STM32 外设的时候，任何时候都要先使能该外设的时钟！**
+    - 可使用3种方法获取引脚变量
+        - GPIO_SetBits(GPIOF, GPIO_Pin_9);
+            - GPIOX在原理图上已标注
+        - #define LED0 PFout(9)
+        - GPIOF->BSRRH=GPIO_Pin_9;
 - 2020年10月21日12:08:58 update readme.md
 ## 目录
 0. [项目模板](./contents/ch0-template)
