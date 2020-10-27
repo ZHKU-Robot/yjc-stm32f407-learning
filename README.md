@@ -1,11 +1,20 @@
-# yjc-stm32学习
+# yjc-stm32f407zg学习
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](.)
 
 ***
+欢迎懂行的兄弟(*说的就是你*)update
+
+ ![img](img/20160426646095_UXPhRS.jpg) 
+
 本仓库包含以下内容：
 
-1. 一个傻逼的自我修养
+1. stm32学习笔记(虽然是搬运的，但是好歹看了一遍)
+2. 自己写的一些stm32 **toy**
+
+ ![img](img/20190629805285_CGPMBi.jpg) 
+
+
 
 ## 内容列表
 
@@ -23,11 +32,28 @@
 ## 前言
 在学习前，推荐阅读[快速组织代码技巧](./contents/ch01-quickexample)
 ## TODO
-- 俄罗斯方块
-- 贪吃蛇必须要安排(已完成)
-
+- 游戏
+    - 俄罗斯方块
+    - 贪吃蛇必须要安排(已完成)
+- 基础
+    - 一大堆..不会啊
 
 ## 更新
+
+- 2020年10月26日19:41:56 更新 [ch7-PWM](contents\ch7-PWM) 
+    - 显然PWM我们已经接触过两次了，那么32就比较复杂了
+    - 开启PWM步骤为
+        - **开启** **TIM14** **和** **GPIO** **时钟，配置** **PF9** **选择复用功能** **AF9****（****TIM14****）输出。** 
+        - **初始化** **TIM14,****设置** **TIM14** **的** **ARR** **和** **PSC** **等参数。**
+            - arr=自动重装载值
+            - psc=预分频值 
+        - **设置** **TIM14_CH1** **的** **PWM** **模式，使能** **TIM14** **的** **CH1** **输出。**
+            - `TIM_OC1Init()。 `
+            - `TIM_OCMode= TIM_OCMode_PWM1`
+        - **使能** **TIM14****。** 
+            - `TIM_Cmd(TIM14, ENABLE); `
+        - **修改** **TIM14_CCR1** **来控制占空比。**
+            - `TIM_SetComparex(x=1,2,3,4)`
 - 2020年10月26日12:11:29 了解了32的[定时器中断](contents\ch6-timer) 
     - 发现也是差不多的，大概步骤一样
         1. ****TIM3** **时钟使能。**
@@ -45,21 +71,23 @@
         5. 编写中断服务函数。
 - 2020年10月25日15:19:42 成功运行[贪吃蛇](./demo/mYsnake)
     - 如有bug请提交issue麻烦了
+    - 目前已知bug：
+        - 随机数食物生成有bug
+            - 因为不知道怎么生成随机数
 - 2020年10月23日20:51:08 update cha-[TFTLCD显示屏](./contents/cha-TFTLCD) 
     - 这一章很难,推荐选读，我们只需要去知道怎么调函数就好hhh
-- 2020年10月22日22:19:14 update ch4-[串口通信实验](./contents/ch4-serialport) 和 ch01-[快速组织代码](./contents/ch01-quickexample)
+- 2020年10月22日22:19:14 update ch4-[串口通信实验](./contents/ch4-serialPort) 和 ch01-[快速组织代码](./contents/ch01-quickExample)
     - 串口设置的一般步骤可以总结为如下几个步骤：
-        1. 串口时钟使能，GPIO 时钟使能。 
-        2. 设置引脚复用器映射：调用 GPIO_PinAFConfig 函数。 
+        1. 串口时钟使能，GPIO 时钟使能。 设置引脚复用器映射：调用` GPIO_PinAFConfig `函数。 
         3. GPIO 初始化设置：要设置模式为复用功能。 
         4. 串口参数初始化：设置波特率，字长，奇偶校验等参数。 
         5. 开启中断并且初始化 NVIC，使能中断（如果需要开启中断才需要这个步骤）。 
         6. 使能串口。 
-        7. 编写中断处理函数：函数名格式为 USARTxIRQHandler(x 对应串口号)。 
+        7. 编写中断处理函数：函数名格式为 `USARTxIRQHandler(x 对应串口号)。 `
 - 2020年10月22日19:02:19 update ch2-[蜂鸣器](./contents/ch2-beep)和ch3-[键盘输入](./contents/ch3-keyinput)
     - 蜂鸣器
-        - #define BEEP PFout(8)
-        -  GPIO_ResetBits(GPIOF,GPIO_Pin_8);  //蜂鸣器对应引脚GPIOF8拉低， 
+        - `#define BEEP PFout(8)`
+        -  `GPIO_ResetBits(GPIOF,GPIO_Pin_8);  //蜂鸣器对应引脚GPIOF8拉低， `
     - 键盘输入
         - KEY0 连接在 PE4 上
         - KEY1 连接在 PE3 上
@@ -70,10 +98,10 @@
 - 2020年10月21日23:25:30 update ch1-[跑马灯](./contents/ch1-ledwater)
     - **在配置 STM32 外设的时候，任何时候都要先使能该外设的时钟！**
     - 可使用3种方法获取引脚变量
-        - GPIO_SetBits(GPIOF, GPIO_Pin_9);
+        - `GPIO_SetBits(GPIOF, GPIO_Pin_9);`
             - GPIOX在原理图上已标注
-        - #define LED0 PFout(9)
-        - GPIOF->BSRRH=GPIO_Pin_9;
+        - `#define LED0 PFout(9)`
+        - `GPIOF->BSRRH=GPIO_Pin_9;`
 - 2020年10月21日12:08:58 update readme.md
 ## 目录
 0. [项目模板](./contents/ch0-template)
