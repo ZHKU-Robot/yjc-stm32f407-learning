@@ -14,7 +14,7 @@
 1. stm32学习笔记(虽然是搬运的，但是好歹看了一遍)
 2. 自己写的一些stm32 **toy**
 
- ![img](img/20190629805285_CGPMBi.jpg) 
+​                                                                                     ![img](img/20190629805285_CGPMBi.jpg) 
 
 ## 内容列表
 
@@ -31,7 +31,13 @@
 - [使用许可](#使用许可)
 ## 前言
 
-在学习前，推荐阅读[快速组织代码技巧](./contents/ch01-quickexample)
+在学习前，推荐阅读
+
+1.  [ch0-template](contents\ch0-template) 
+2.  [ch02-stm32HardWare](contents\ch02-stm32HardWare) 
+3.  [ch03-stm32standard](contents\ch03-stm32standard) 
+4.  [ch04-system](contents\ch04-system) 
+5. [快速组织代码技巧](./contents/ch01-quickexample)
 
 ### **STM32F4** **学习方法** 
 
@@ -85,6 +91,8 @@ STM32F4 不是妖魔鬼怪，不要畏难，STM32F4 的学习和普通单片机�
 
 - 游戏
     - 俄罗斯方块
+    - 2048
+    - 八分音符酱
     - 贪吃蛇必须要安排(已完成)
 - 基础
     - 。。
@@ -92,11 +100,11 @@ STM32F4 不是妖魔鬼怪，不要畏难，STM32F4 的学习和普通单片机�
 ## 更新
 
 - 2020年10月28日10:46:04 更新  [ch02-stm32HardWare](contents\ch02-stm32HardWare) 
-    
+  
     - 复习了一下硬件基础，准备干活
     
 - 2020年10月27日13:06:29更新  [chi-DAC](contents\chi-DAC) 
-    
+  
     1. #### **开启** **PA** **口时钟，设置** **PA4** **为模拟输入。**
     2. **使能** **DAC1** **时钟。** 
     3. **初始化** **DAC,****设置** **DAC** **的工作模式。** 
@@ -104,7 +112,7 @@ STM32F4 不是妖魔鬼怪，不要畏难，STM32F4 的学习和普通单片机�
     5. **设置** **DAC** **的输出值。** 
     
 - 2020年10月27日13:06:23 更新 [chh-lightSensor](contents\chh-lightSensor) 
-    
+  
     - 读取` LIGHT_SENSOR（PF7）`上面的电压，即可得到环境光线的强弱。光线越强，电压越低，光 线越暗，电压越高。 
     
 - 2020年10月27日13:06:04 更新  [chg-tempSensor](contents\chg-tempSensor) 
@@ -191,7 +199,7 @@ STM32F4 不是妖魔鬼怪，不要畏难，STM32F4 的学习和普通单片机�
             - 因为不知道怎么生成随机数
     
 - 2020年10月23日20:51:08 update cha-[TFTLCD显示屏](./contents/cha-TFTLCD) 
-    
+  
     - 这一章很难,推荐选读，我们只需要去知道怎么调函数就好hhh
     
 - 2020年10月22日22:19:14 update ch4-[串口通信实验](./contents/ch4-serialPort) 和 ch01-[快速组织代码](./contents/ch01-quickExample)
