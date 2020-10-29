@@ -42,6 +42,7 @@
 ## 更新
 
 - 2020年10月29日20:52:12 更新  [2048](demo\2048) 
+    - 若有bug 欢迎提交issue
   
 - 2020年10月28日10:46:04 更新  [ch02-stm32HardWare](contents\ch02-stm32HardWare) 
   
