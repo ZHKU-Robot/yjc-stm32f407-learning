@@ -181,6 +181,5 @@ snakeNode *initSnake(void)
 void snakePrint(snakeNode *tempHead)
 {
 
-    LCD_DrawRectangle(tempHead->x * GRIDWIDTH, tempHead->y * GRIDHEIGHT, GRIDWIDTH * (tempHead->x + 1), (tempHead->y + 1) * GRIDHEIGHT);
     LCD_Fill(tempHead->x * GRIDWIDTH, tempHead->y * GRIDHEIGHT, GRIDWIDTH * (tempHead->x + 1), (tempHead->y + 1) * GRIDHEIGHT, colorTable[rand() % 12]);
 }

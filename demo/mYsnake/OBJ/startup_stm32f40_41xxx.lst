@@ -857,8 +857,7 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=..\obj\startup_stm32f40_41xxx.d -o..\obj\startup_stm32f40_41xxx
-.o -I"F:\BaiduNetdiskDownload\【正点原子】探索者STM32F407开发板资料 视频盘(A盘)
-\4，程序源码\2，标准例程-库函数版本\实验13 TFT LCD显示实验\USER\RTE" -IE:\mdk\A
+.o -ID:\ccrepository\32\yjc-stm32f407-learning\demo\mYsnake\USER\RTE -IE:\mdk\A
 RM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include -IE:\mdk\ARM\CMSIS\Include --pr
 edefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" --predefin
 e="STM32F40_41xxx SETA 1" --list=..\obj\startup_stm32f40_41xxx.lst ..\CORE\star
