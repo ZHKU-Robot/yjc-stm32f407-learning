@@ -41,4 +41,3 @@
 ..\obj\snake.o: E:\mdk\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\snake.o: ..\SYSTEM\usart\usart.h
 ..\obj\snake.o: E:\mdk\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\snake.o: E:\mdk\ARM\ARMCC\Bin\..\include\time.h

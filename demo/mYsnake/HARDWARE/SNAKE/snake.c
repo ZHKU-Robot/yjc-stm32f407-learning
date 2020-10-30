@@ -1,8 +1,5 @@
 #include "snake.h"
-#include "lcd.h"
-#include "usart.h"
-#include <stdlib.h>
-#include <time.h>
+
 //画笔颜色
 #define HEIGHT 800
 #define WIDTH 480

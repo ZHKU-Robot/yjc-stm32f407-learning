@@ -2,6 +2,9 @@
 #define __SNAKE_H
 #include "sys.h"
 #include "key.h"
+#include "lcd.h"
+#include "usart.h"
+#include <stdlib.h>
 //LED端口定义
 #define LED0 PFout(9)	// DS0
 #define LED1 PFout(10)	// DS1	 

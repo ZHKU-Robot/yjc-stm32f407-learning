@@ -5,13 +5,12 @@
 #include "lcd.h"
 #include "snake.h"
 #include "key.h"
-
 int main(void)
 {
 	u8 x = 0;
 	// u8 lcd_id[12]; //´æ·ÅLCD ID×Ö·û´®
 
-	snakeNode *snake;
+		snakeNode *snake;
 
 	snake = initSnake();
 	createFood();
@@ -28,17 +27,16 @@ int main(void)
 
 	// POINT_COLOR=RED;
 	KEY_Init();
+
 	while (1)
 	{
 		snakeTurn();
-
 		showTitle();
 		if (x % 6 == 0)
 		{
 			snakeMove(snake);
 			x=0;
 		}
-
 		foodPrint();
 		LED0 = !LED0;
 		x++;
