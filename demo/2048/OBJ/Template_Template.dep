@@ -667,7 +667,7 @@ I (..\FWLIB\inc\stm32f4xx_dac.h)(0x5710F350)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x5710F350)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x5710F350)
 I (..\SYSTEM\delay\delay.h)(0x5710F353)
-F (..\HARDWARE\GAME\game.c)(0x5F9ED635)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\HARDWARE\RNG -I..\HARDWARE\GAME -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\KEY -I..\HARDWARE\MPU6050 -I..\HARDWARE\IIC -I..\HARDWARE\ANIMATION-I D:\ccrepository\32\yjc-stm32f407-learning\demo\2048\USER\RTE-I E:\mdk\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I E:\mdk\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\game.o --omf_browse ..\obj\game.crf --depend ..\obj\game.d)
+F (..\HARDWARE\GAME\game.c)(0x5F9ED711)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\HARDWARE\RNG -I..\HARDWARE\GAME -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\KEY -I..\HARDWARE\MPU6050 -I..\HARDWARE\IIC -I..\HARDWARE\ANIMATION-I D:\ccrepository\32\yjc-stm32f407-learning\demo\2048\USER\RTE-I E:\mdk\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I E:\mdk\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\game.o --omf_browse ..\obj\game.crf --depend ..\obj\game.d)
 I (..\HARDWARE\GAME\game.h)(0x5F9ED310)
 I (..\HARDWARE\RNG\rng.h)(0x5F998384)
 I (..\SYSTEM\sys\sys.h)(0x5710F353)
@@ -925,7 +925,7 @@ I (..\HARDWARE\MPU6050\eMPL\dmpmap.h)(0x5710F3A0)
 I (..\SYSTEM\usart\usart.h)(0x5710F391)
 I (..\SYSTEM\sys\sys.h)(0x5710F353)
 I (..\SYSTEM\delay\delay.h)(0x5710F353)
-F (..\HARDWARE\ANIMATION\animation.c)(0x5F9ED364)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\HARDWARE\RNG -I..\HARDWARE\GAME -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\KEY -I..\HARDWARE\MPU6050 -I..\HARDWARE\IIC -I..\HARDWARE\ANIMATION-I D:\ccrepository\32\yjc-stm32f407-learning\demo\2048\USER\RTE-I E:\mdk\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I E:\mdk\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\animation.o --omf_browse ..\obj\animation.crf --depend ..\obj\animation.d)
+F (..\HARDWARE\ANIMATION\animation.c)(0x5F9ED9A3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\FWLIB\inc -I..\HARDWARE\LED -I..\HARDWARE\LCD -I..\HARDWARE\RNG -I..\HARDWARE\GAME -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\KEY -I..\HARDWARE\MPU6050 -I..\HARDWARE\IIC -I..\HARDWARE\ANIMATION-I D:\ccrepository\32\yjc-stm32f407-learning\demo\2048\USER\RTE-I E:\mdk\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I E:\mdk\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\animation.o --omf_browse ..\obj\animation.crf --depend ..\obj\animation.d)
 I (..\HARDWARE\ANIMATION\animation.h)(0x5F9E9067)
 I (..\SYSTEM\sys\sys.h)(0x5710F353)
 I (..\USER\stm32f4xx.h)(0x5710F354)

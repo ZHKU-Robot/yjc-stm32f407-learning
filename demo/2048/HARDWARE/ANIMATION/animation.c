@@ -10,7 +10,7 @@ void verticalPixelsUpdate(short row, u16 x1, u16 y1, u16 x2, u16 y2, u16 ms, u16
     //首先获取某点的颜色,范围是
     short i, j;
     u16 color; //nextcolor//小优化,判断是否颜色相等,若相等则不draw
-    u16 width = y2 - y1+1;
+    u16 width = y2 - y1;
     if (row >= 0)
     {
         short end = y1 + row;
@@ -18,7 +18,7 @@ void verticalPixelsUpdate(short row, u16 x1, u16 y1, u16 x2, u16 y2, u16 ms, u16
         {
             end = 800;
         }
-        for (i = y1; i <= y2, y1 <= end; i++, y1++, y2++)
+        for (i = y1-1; i <= y2, y1 <= end; i++, y1++, y2++)
         {
             for (j = x1; j <= x2; j++)
             {
@@ -85,7 +85,7 @@ void horizontalPixelsUpdate(short column, u16 x1, u16 y1, u16 x2, u16 y2, u16 ms
     }
     else
     {
-        short end = x2 + column-1;
+        short end = x2 + column;
         if (end < 0)
         {
             end = 0;

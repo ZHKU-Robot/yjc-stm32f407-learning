@@ -1357,8 +1357,8 @@ Image Symbol Table
     dmp_register_tap_cb                      0x0800aba7   Thumb Code    10  inv_mpu_dmp_motion_driver.o(.text)
     dmp_register_android_orient_cb           0x0800abb1   Thumb Code    10  inv_mpu_dmp_motion_driver.o(.text)
     verticalPixelsUpdate                     0x0800abc1   Thumb Code   240  animation.o(.text)
-    horizontalPixelsUpdate                   0x0800acb1   Thumb Code   244  animation.o(.text)
-    animationMove                            0x0800ada5   Thumb Code   156  animation.o(.text)
+    horizontalPixelsUpdate                   0x0800acb1   Thumb Code   242  animation.o(.text)
+    animationMove                            0x0800ada3   Thumb Code   156  animation.o(.text)
     __use_no_semihosting                     0x0800ae45   Thumb Code     2  use_no_semi_2.o(.text)
     __aeabi_ldivmod                          0x0800ae47   Thumb Code     0  llsdiv.o(.text)
     _ll_sdiv                                 0x0800ae47   Thumb Code    72  llsdiv.o(.text)
@@ -1678,7 +1678,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       644          4          0          0          0       2512   animation.o
+       644          6          0          0          0       2516   animation.o
        260          8          0          4          0       1457   delay.o
       2580        130          0         72          0       4122   game.o
       8896        222        157         53          0      23861   inv_mpu.o
@@ -1702,7 +1702,7 @@ Image component sizes
        328         16          0          6        200       3314   usart.o
 
     ----------------------------------------------------------------------
-     44044       1138       9754        184       1768     389406   Object Totals
+     44044       1140       9754        184       1768     389410   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          3          8          2          0   (incl. Padding)
 
@@ -1798,9 +1798,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     51448       1716      10056        184       1864     387854   Grand Totals
-     51448       1716      10056        184       1864     387854   ELF Image Totals
-     51448       1716      10056        184          0          0   ROM Totals
+     51448       1718      10056        184       1864     387858   Grand Totals
+     51448       1718      10056        184       1864     387858   ELF Image Totals
+     51448       1718      10056        184          0          0   ROM Totals
 
 ==============================================================================
 
