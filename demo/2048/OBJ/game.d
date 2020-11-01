@@ -47,3 +47,4 @@
 ..\obj\game.o: ..\HARDWARE\IIC\myiic.h
 ..\obj\game.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\game.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+..\obj\game.o: ..\HARDWARE\ANIMATION\animation.h

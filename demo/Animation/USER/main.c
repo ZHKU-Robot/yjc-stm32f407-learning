@@ -7,7 +7,7 @@
 #include "animation.h"
 int main(void)
 {
-	u8 x = 0;
+	//u8 x = 0;
 	// u8 lcd_id[12]; //存放LCD ID字符串
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置系统中断优先级分组2
 	delay_init(168);								//初始化延时函数
@@ -27,12 +27,9 @@ int main(void)
 	{
 		delay_ms(1000);
 		LCD_Fill(200, 100, 250, 150, BLACK);
-		animationMove(200, 100, 250, 150, -100, 1, 'y');
-		LCD_Fill(200, 100, 250, 150, BLACK);
-		animationMove(200, 100, 250, 150, 100, 1, 'y');
-		LCD_Fill(200, 100, 250, 150, BLACK);
 		animationMove(200, 100, 250, 150, -100, 1, 'x');
-		LCD_Fill(200, 100, 250, 150, BLACK);
-		animationMove(200, 100, 250, 150, 100, 1, 'x');
+
+		animationMove(100, 100, 150, 150, 100, 1, 'x');
 	}
 }
+

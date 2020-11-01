@@ -22,11 +22,14 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 D:\ccrepository\32\yjc-stm32f407-learning\demo\2048\USER\Template.uvprojx
-Project File Date:  10/29/2020
+Project File Date:  11/01/2020
 
 <h2>Output:</h2>
 Rebuild target 'Template'
 compiling main.c...
+main.c(13): warning:  #177-D: variable "x" was declared but never referenced
+        u8 x = 0;
+main.c: 1 warning, 0 errors
 compiling stm32f4xx_it.c...
 compiling system_stm32f4xx.c...
 assembling startup_stm32f40_41xxx.s...
@@ -51,10 +54,20 @@ compiling mpu6050.c...
 compiling myiic.c...
 compiling inv_mpu.c...
 compiling inv_mpu_dmp_motion_driver.c...
+compiling animation.c...
+..\HARDWARE\ANIMATION\animation.c(21): warning:  #174-D: expression has no effect
+          for (i = y1; i <= y2, y1 <= end; i++, y1++, y2++)
+..\HARDWARE\ANIMATION\animation.c(42): warning:  #174-D: expression has no effect
+          for (i = y2; i >= y1, y2 >= end; i--, y1--, y2--)
+..\HARDWARE\ANIMATION\animation.c(72): warning:  #174-D: expression has no effect
+          for (i = x1-2; i <= x2, x1 <= end; i++, x1++, x2++)
+..\HARDWARE\ANIMATION\animation.c(93): warning:  #174-D: expression has no effect
+          for (i = x2; i >= x1, x2 >= end; i--, x1--, x2--)
+..\HARDWARE\ANIMATION\animation.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=50168 RO-data=10056 RW-data=180 ZI-data=1868  
+Program Size: Code=51448 RO-data=10056 RW-data=184 ZI-data=1864  
 FromELF: creating hex file...
-"..\OBJ\Template.axf" - 0 Error(s), 0 Warning(s).
+"..\OBJ\Template.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\ccrepository\32\yjc-stm32f407-learning\demo\2048\USER\RTE

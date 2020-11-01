@@ -12,7 +12,8 @@
 #define GRIDXINTERVAL 10
 #define GRIDYINTERVAL GRIDXINTERVAL
 #define BACKGROUND 0X841F
-#define SENSITIVITY 30//灵敏度
+#define SENSITIVITY 30 //灵敏度
+#define MOVETIME 0.2
 //
 
 u8 rectArr[GRIDYNUM][GRIDXNUM] = {
@@ -29,12 +30,15 @@ u8 click = 0;
 short temp;
 u8 move = 1;
 float pitch, roll, yaw;
+short horizontal = 0, vertical = 0;
+
 void moveListen()
 {
     if (mpu_dmp_get_data(&pitch, &roll, &yaw) == 0)
     {
         if ((click % SENSITIVITY) == 0)
         {
+
             temp = pitch * 10;
             if (temp < 0)
             {
@@ -71,23 +75,31 @@ void moveListen()
 
             if (pitch > 20)
             {
-                moveDown();
                 move = 1;
+                horizontal = 0;
+                vertical = 1;
+                moveDown();
             }
             else if (pitch < -20)
             {
-                moveUp();
                 move = 1;
+                horizontal = 0;
+                vertical = -1;
+                moveUp();
             }
             else if (roll < -20)
             {
-                moveRight();
                 move = 1;
+                horizontal = 1;
+                vertical = 0;
+                moveRight();
             }
             else if (roll > 20)
             {
-                moveLeft();
                 move = 1;
+                horizontal = -1;
+                vertical = 0;
+                moveLeft();
             }
         }
     }
@@ -99,7 +111,7 @@ void moveRight()
     int x, y;
     u8 cur, next;
     //从1开始
-    for (x = GRIDYNUM - 2; x >= 0; x--)
+    for (x = GRIDXNUM - 2; x >= 0; x--)
     {
         //从右逐渐移动
         for (y = 0; y < GRIDYNUM; y++)
@@ -115,6 +127,7 @@ void moveRight()
                     next = rectArr[y][t + 1];
                     if (next == 0)
                     {
+
                         rectArr[y][t + 1] = cur;
                         rectArr[y][t] = 0;
                     }
@@ -137,6 +150,7 @@ void moveRight()
                             rectArr[y][t] = cur;
                         }
                     }
+                    animationMove(XMARGIN + t * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + y * GRIDHEIGHT + GRIDYINTERVAL, (1 + t) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (y + 1) * GRIDHEIGHT - GRIDYINTERVAL, horizontal * GRIDWIDTH, MOVETIME, 'x', BACKGROUND);
                 }
             }
         }
@@ -194,6 +208,7 @@ void moveDown()
                             rectArr[t][x] = cur;
                         }
                     }
+                    animationMove(XMARGIN + x * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + t * GRIDHEIGHT + GRIDYINTERVAL, (1 + x) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (t + 1) * GRIDHEIGHT - GRIDYINTERVAL, vertical * GRIDWIDTH, MOVETIME, 'y', BACKGROUND);
                 }
             }
         }
@@ -230,6 +245,7 @@ void moveUp()
                     next = rectArr[t - 1][x];
                     if (next == 0)
                     {
+
                         rectArr[t - 1][x] = cur;
                         rectArr[t][x] = 0;
                     }
@@ -252,6 +268,7 @@ void moveUp()
                             rectArr[t][x] = cur;
                         }
                     }
+                    animationMove(XMARGIN + x * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + t * GRIDHEIGHT + GRIDYINTERVAL, (1 + x) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (t + 1) * GRIDHEIGHT - GRIDYINTERVAL, vertical * GRIDWIDTH, MOVETIME, 'y', BACKGROUND);
                 }
             }
         }
@@ -309,6 +326,7 @@ void moveLeft()
                             rectArr[y][t] = cur;
                         }
                     }
+                    animationMove(XMARGIN + t * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + y * GRIDHEIGHT + GRIDYINTERVAL, (1 + t) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (y + 1) * GRIDHEIGHT - GRIDYINTERVAL, horizontal * GRIDWIDTH, MOVETIME, 'x', BACKGROUND);
                 }
             }
         }
@@ -338,27 +356,25 @@ void initRect()
         rectArr[y][x] = 1;
     }
 }
+
 void rectPrint()
 {
-    if (move)
+
+    u8 rectx, recty;
+    for (recty = 0; recty < GRIDYNUM; recty++)
     {
-        u8 rectx, recty;
-        for (recty = 0; recty < GRIDYNUM; recty++)
+        for (rectx = 0; rectx < GRIDXNUM; rectx++)
         {
-            for (rectx = 0; rectx < GRIDXNUM; rectx++)
+            if (rectArr[recty][rectx] > 0)
             {
-                if (rectArr[recty][rectx] > 0)
-                {
-                    // LCD_DrawRectangle(XMARGIN + rectx * GRIDWIDTH, TOPMARGIN + recty * GRIDHEIGHT,  (1 + rectx) * GRIDWIDTH-XMARGIN , TOPMARGIN + (recty + 1) * GRIDHEIGHT);
-                    LCD_Fill(XMARGIN + rectx * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + recty * GRIDHEIGHT + GRIDYINTERVAL, (1 + rectx) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (recty + 1) * GRIDHEIGHT - GRIDYINTERVAL, colorTable[rectArr[recty][rectx]]); //colorTable[(u8)RNG_Get_RandomRange(0, 12)]
-                }
-                else
-                {
-                    LCD_Fill(XMARGIN + rectx * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + recty * GRIDHEIGHT + GRIDYINTERVAL, (1 + rectx) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (recty + 1) * GRIDHEIGHT - GRIDYINTERVAL, BACKGROUND);
-                }
+                // LCD_DrawRectangle(XMARGIN + rectx * GRIDWIDTH, TOPMARGIN + recty * GRIDHEIGHT,  (1 + rectx) * GRIDWIDTH-XMARGIN , TOPMARGIN + (recty + 1) * GRIDHEIGHT);
+                LCD_Fill(XMARGIN + rectx * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + recty * GRIDHEIGHT + GRIDYINTERVAL, (1 + rectx) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (recty + 1) * GRIDHEIGHT - GRIDYINTERVAL, colorTable[rectArr[recty][rectx]]); //colorTable[(u8)RNG_Get_RandomRange(0, 12)]
+            }
+            else
+            {
+                LCD_Fill(XMARGIN + rectx * GRIDWIDTH + GRIDXINTERVAL, TOPMARGIN + recty * GRIDHEIGHT + GRIDYINTERVAL, (1 + rectx) * GRIDWIDTH - XMARGIN - GRIDXINTERVAL, TOPMARGIN + (recty + 1) * GRIDHEIGHT - GRIDYINTERVAL, BACKGROUND);
             }
         }
-        move = 0;
     }
 }
 u8 getRandom()

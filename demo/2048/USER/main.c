@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	//u8 x = 0;
+	u8 x = 0;
 	// u8 lcd_id[12]; //存放LCD ID字符串
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置系统中断优先级分组2
@@ -20,7 +20,8 @@ int main(void)
 	LED_Init(); //初始化LED
 	LCD_Init(); //初始化LCD FSMC接口
 	KEY_Init();
-	MPU_Init();		   //初始化MPU6050
+	MPU_Init(); //初始化MPU6050
+	initRandom();
 	POINT_COLOR = RED; //设置字体为红色
 	LCD_ShowString(30, 50, 200, 16, 16, "Explorer STM32F4");
 	LCD_ShowString(30, 70, 200, 16, 16, "MPU6050 TEST");
@@ -38,14 +39,19 @@ int main(void)
 		LCD_Fill(30, 130, 239, 130 + 16, WHITE);
 		delay_ms(200);
 	}
-	initRandom();
-	POINT_COLOR = RED;
+
 	while (1)
 	{
 
 		rectPrint();
 		moveListen();
-		// delay_ms(10);
+		// if (x++ == 100)
+		// {
+		// 	LCD_Clear(BACK_COLOR);
+		// 	rectPrint();
+		// 	x=0;
+		// }
+		delay_ms(10);
 		// LED0 = !LED0; //LED闪烁
 	}
 }

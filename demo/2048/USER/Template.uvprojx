@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\FWLIB\inc;..\HARDWARE\LED;..\HARDWARE\LCD;..\HARDWARE\RNG;..\HARDWARE\GAME;..\HARDWARE\MPU6050\eMPL;..\HARDWARE\KEY;..\HARDWARE\MPU6050;..\HARDWARE\IIC</IncludePath>
+              <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\FWLIB\inc;..\HARDWARE\LED;..\HARDWARE\LCD;..\HARDWARE\RNG;..\HARDWARE\GAME;..\HARDWARE\MPU6050\eMPL;..\HARDWARE\KEY;..\HARDWARE\MPU6050;..\HARDWARE\IIC;..\HARDWARE\ANIMATION</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -562,6 +562,11 @@
               <FileName>inv_mpu_dmp_motion_driver.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>animation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\ANIMATION\animation.c</FilePath>
             </File>
           </Files>
         </Group>
