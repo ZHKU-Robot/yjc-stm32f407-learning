@@ -15,7 +15,7 @@ u16 colorTable[] = {WHITE, BLACK, BLUE, BRED, GRED, RED, MAGENTA, GREEN, CYAN, Y
 u16 init_X = 0, init_Y = 0;
 
 // u8 radius = GRIDWIDTH / 2;
-int horizonal = 1, vertical = 0;
+int horizontal = 1, vertical = 0;
 u8 title[] = "RAINBOW SNAKE";
 u8 titleLeng=sizeof(title)/sizeof(u8);
 
@@ -38,18 +38,18 @@ void snakeTurn()
     {
     case 1: //UP
         vertical = 0;
-        horizonal = 1;
+        horizontal = 1;
         break;
     case 2:
         vertical = 1;
-        horizonal = 0;
+        horizontal = 0;
         break;
     case 3:
-        horizonal = -1;
+        horizontal = -1;
         vertical = 0;
         break;
     case 4:
-        horizonal = 0;
+        horizontal = 0;
         vertical = -1;
     default:
 
@@ -93,7 +93,7 @@ void snakeMove(snakeNode *temphead)
 {
     snakeNode *nexthead, *temp;
     nexthead = (snakeNode *)malloc(sizeof(snakeNode));
-    nexthead->x = head->x + horizonal;
+    nexthead->x = head->x + horizontal;
     nexthead->y = head->y + vertical;
     //printf(" width= %d  height=%d \n", lcddev.width, lcddev.height);
     printf("nexthead.x==%d nexthead.y ==%d \n", nexthead->x, nexthead->y);

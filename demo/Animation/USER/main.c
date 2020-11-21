@@ -27,9 +27,9 @@ int main(void)
 	{
 		delay_ms(1000);
 		LCD_Fill(200, 100, 250, 150, BLACK);
-		animationMove(200, 100, 250, 150, -100, 1, 'x');
+		animationMove(200, 100, 250, 150, -100, 1, 'x',BACK_COLOR);
 
-		animationMove(100, 100, 150, 150, 100, 1, 'x');
+		animationMove(100, 100, 150, 150, 100, 1, 'x',BACK_COLOR);
 	}
 }
 
